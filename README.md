@@ -73,7 +73,7 @@ You can use Eclipse with PyDev Plugin to import the sample project.
 
 4. Select the sample project path via **Browse**, then click **Finish**.
 
-   ![Select the sample project path via Browse](./Images/11.png)
+    ![Select the sample project path via Browse](./Images/11.png)
 
 5. See the **PyDev Package Explorer**.
 
