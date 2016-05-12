@@ -10,6 +10,7 @@ author: danielxu-msft
 
 [AZURE.INCLUDE [tabs](./includes/iot-hub-get-started-nav-tabs.md)]
 
+
 ## About this sample
 The sample project demonstrates how to get started for using IoT Hub REST API in Python.
 
