@@ -26,20 +26,28 @@ In the sample project, it will show these steps below for helping us to get star
     - In the **Name** box, enter a name to identify your IoT hub. When the **Name** is validated, a green check mark appears in the **Name** box.
     - Change the **Pricing and scale tier** as desired. This tutorial does not require a specific tier.
     - In the **Resource group** box, create a new resource group, or select an existing one. For more information, please refer to [Using resource groups to manage your Azure resources](https://azure.microsoft.com/en-us/documentation/articles/resource-group-portal/).
+
     ![Create a new resource group or select an existing one](./Images/2.png)
     - Use **Location** to specify the geographic location in which to host your IoT hub.
 - Once the new IoT hub options are configured, click **Create**. It can take a few minutes for the IoT hub to be created. To check the status, you can monitor the progress on the Startboard. Or, you can monitor your progress from the Notifications section.
 - The two figures below shown the progress on the Startboard.
+
 ![The progress on the Startboard](./Images/3.png)
+
+
 ## Get the connection information
 - Getting the IoT Hub **Hostname**
 
-Copy the IoT Hub **Hostname** at the dashboard
+Copy the IoT Hub **Hostname** at the dashboard.
+
 ![Copy the IoT Hub Hostname at the dashboard](./Images/4.png)
+
 - Getting the **Shared access key** and **Connection string** of the policy
 
-Click the **Key** button to show the **Shared access policies**, then select one policy, then copy the **Shared access key** and **Connection string**
+Click the **Key** button to show the **Shared access policies**, then select one policy, then copy the **Shared access key** and **Connection string**.
+
 ![Click the Key button to show the Shared access policies](./Images/5.png)
+
 ![Copy the Shared access key and Connection string](./Images/6.png)
 
 ## Building the sample
@@ -50,25 +58,36 @@ You can use Eclipse with PyDev Plugin to import the sample project.
 - Install PyDev plugin via Eclipse Marketplace, click **Help** -> **Eclipse Marketplace**, then input **PyDev** in the search box and enter, then click the **install** button and follow the tips to install until **Finish** and restart Eclipse.
 
 ![Install PyDev plugin via Eclipse Marketplace](./Images/7.png)
+
 ![Input PyDev in the search box and enter](./Images/8.png)
+
 ### Import the sample project
 - Open the Eclipse.
 - Click **File** -> **Import**.
 
 ![Click File -> Import](./Images/9.png)
+
 - Select **General** -> **Existing Projects into Workspace**, then click **Next**.
+
 ![Select General -> Existing Projects into Workspace](./Images/10.png)
+
 - Select the sample project path via **Browse**, then click **Finish**.
+
 ![Select the sample project path via Browse](./Images/11.png)
+
 - See the **PyDev Package Explorer**.
+
 ![See the PyDev Package Explorer](./Images/12.png)
+
 ## Running the sample
 There are two scripts separately at the **service** and **device** directoies.
 - service/deviceManager.py: Using [Device Indentities REST APIs](https://msdn.microsoft.com/en-us/library/azure/mt548489.aspx) to create a new device identity, retrieve a device identity, and list device identities.
 - device/d2cMsgSender.py: Using [Send device-to-cloud message](https://msdn.microsoft.com/en-US/library/azure/mt590784.aspx) API to send device-to-cloud message from the simulated device application to IoT Hub.
 
 You can open the Python script on Eclipse, and click the right mouse button at the script window, then click the **Run As** -> **2 Python Run** to run the script, then see the result at the **Console** Window.
+
 ![Click the Run As -> 2 Python Run to run the script](./Images/13.png)
+
 ## Code sample running result
 The results for running `service/deviceManager.py`:
 
