@@ -38,13 +38,13 @@ In the sample project, it will show these steps below for helping us to get star
 ## Get the connection information
 - Getting the IoT Hub **Hostname**
 
-Copy the IoT Hub **Hostname** at the dashboard.
+    Copy the IoT Hub **Hostname** at the dashboard.
 
     ![Copy the IoT Hub Hostname at the dashboard](./Images/4.png)
 
 - Getting the **Shared access key** and **Connection string** of the policy
 
-Click the **Key** button to show the **Shared access policies**, then select one policy, then copy the **Shared access key** and **Connection string**.
+    Click the **Key** button to show the **Shared access policies**, then select one policy, then copy the **Shared access key** and **Connection string**.
 
     ![Click the Key button to show the Shared access policies](./Images/5.png)
 
@@ -105,14 +105,14 @@ The results for running `service/deviceManager.py`:
     ```
 
 2. The result for calling the function `retrieveDeviceId(deviceId)`
-```
-(u'{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}', 200)
-```
+    ```
+    (u'{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}', 200)
+    ```
 
 3. The result for calling the function `listDeviceId()` list all registed device identities.
-```
-(u'[{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}]', 200)
-```
+    ```
+    (u'[{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}]', 200)
+    ```
 
 The result for running `device/d2cMsgSender.py`, it includes the empty content and status code 204 from the response if message is sent successfully:
 ```
