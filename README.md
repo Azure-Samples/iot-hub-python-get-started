@@ -1,6 +1,6 @@
 ---
 services: iot-hub
-platforms: php
+platforms: python
 author: danielxu-msft
 ---
 
@@ -87,7 +87,7 @@ There are two scripts separately at the **service** and **device** directoies.
 
 You can open the Python script on Eclipse, and click the right mouse button at the script window, then click the **Run As** -> **2 Python Run** to run the script, then see the result at the **Console** Window.
 
-    ![Click the Run As -> 2 Python Run to run the script](./Images/13.png)
+![Click the Run As -> 2 Python Run to run the script](./Images/13.png)
 
 ## Code sample running result
 The results for running `service/deviceManager.py`:
