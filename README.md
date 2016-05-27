@@ -81,8 +81,10 @@ You can use Eclipse with PyDev Plugin to import the sample project.
     ![See the PyDev Package Explorer](./Images/12.png)
 
 ## Running the sample
-There are two scripts separately at the **service** and **device** directoies.
+There are two scripts separately at the **service** and **device** directories:
+
 - service/deviceManager.py: Using [Device Indentities REST APIs](https://msdn.microsoft.com/en-us/library/azure/mt548489.aspx) to create a new device identity, retrieve a device identity, and list device identities.
+
 - device/d2cMsgSender.py: Using [Send device-to-cloud message](https://msdn.microsoft.com/en-US/library/azure/mt590784.aspx) API to send device-to-cloud message from the simulated device application to IoT Hub.
 
 You can open the Python script on Eclipse, and click the right mouse button at the script window, then click the **Run As** -> **2 Python Run** to run the script, then see the result at the **Console** Window.
