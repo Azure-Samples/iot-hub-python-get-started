@@ -20,20 +20,9 @@ In the sample project, it will show these steps below for helping us to get star
 
 
 ## Create an IoT Hub through Azure Portal
-1. Log on to the [Azure Portal](https://portal.azure.com/).
-2. In the navigation bar, click **New**, then click **Internet of Things**, select **Azure IoT Hub**.
-    ![Select Azure IoT Hub](./Images/1.png)
-3. In the **New IoT Hub** blade, specify the desired configuration for the IoT Hub.
-    - In the **Name** box, enter a name to identify your IoT hub. When the **Name** is validated, a green check mark appears in the **Name** box.
-    - Change the **Pricing and scale tier** as desired. This tutorial does not require a specific tier.
-    - In the **Resource group** box, create a new resource group, or select an existing one. For more information, please refer to [Using resource groups to manage your Azure resources](https://azure.microsoft.com/en-us/documentation/articles/resource-group-portal/).
 
-        ![Create a new resource group or select an existing one](./Images/2.png)
-    - Use **Location** to specify the geographic location in which to host your IoT hub.
-4. Once the new IoT hub options are configured, click **Create**. It can take a few minutes for the IoT hub to be created. To check the status, you can monitor the progress on the Startboard. Or, you can monitor your progress from the Notifications section.
-5. The two figures below shown the progress on the Startboard.
+To do this, refer to the article [Create an IoT Hub through Azure Portal](https://azure.microsoft.com/documentation/articles/iot-hub-csharp-csharp-getstarted/#create-an-iot-hub).
 
-    ![The progress on the Startboard](./Images/3.png)
 
 
 ## Get the connection information
