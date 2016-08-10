@@ -1,7 +1,7 @@
 ---
 services: iot-hub
 platforms: python
-author: danielxu-msft
+author: msonecode
 ---
 
 # How to get started for using IoT Hub REST API in Python
