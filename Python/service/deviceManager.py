@@ -69,7 +69,14 @@ class DeviceManager:
         url = 'https://%s/devices?top=%d&api-version=%s' % (self.iotHost, top, self.API_VERSION)
         r = requests.get(url, headers={'Content-Type': 'application/json', 'Authorization': sasToken})
         return r.text, r.status_code
-        
+
+    def deleteDeviceId(self, deviceId):
+        sasToken = self._buildSasToken()
+        url = 'https://%s/devices/%s?api-version=%s' % (self.iotHost, deviceId, self.API_VERSION)
+        r = requests.delete(url, headers={'Content-Type': 'application/json', 'Authorization': sasToken, 'If-Match': '*' }) 
+        # If-Match Etag, but if * is used, no need to precise the Etag of the device. The Etag of the device can be seen in the header requests.text response 
+        return r.text, r.status_code
+    
 if __name__ == '__main__':
     connectionString = 'HostName=<iot-hub-name>.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=<iothubowner-policy-key>'
     dm = DeviceManager(connectionString)
