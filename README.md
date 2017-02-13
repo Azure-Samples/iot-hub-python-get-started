@@ -9,9 +9,9 @@ author: msonecode
 ## About this sample
 The sample project demonstrates how to get started for using IoT Hub REST API in Python.
 
-The REST APIs for IoT Hub offer programmatic access to the device and messaging services, as well as the resource provder, in IoT Hub. You can access messaging services from within an IoT service running in Azure, or directly over the Internet from any application that can send an HTTP/HTTPS request and receive an HTTP/HTTPS response. You can visit the [IoT Hub REST API references](https://msdn.microsoft.com/en-us/library/azure/mt548492.aspx) on Microsoft Azure offical site to learn more about these APIs, requirements, parameters, request and response via HTTP methods.
+The REST APIs for IoT Hub offer programmatic access to the device and messaging services, as well as the resource provider, in IoT Hub. You can access messaging services within an IoT service running in Azure, or you can directly over the Internet from any application that can send an HTTP/HTTPS request and receive an HTTP/HTTPS response. You can visit the [IoT Hub REST API references](https://msdn.microsoft.com/en-us/library/azure/mt548492.aspx) on Microsoft Azure official site to learn more about these APIs, requirements, parameters, request and response via HTTP methods.
 
-In the sample project, it will show these steps below for helping us to get started.
+In the sample project, steps at below will be proivded for us to get started.
 
 1. Create an IoT Hub through Azure Portal.
 2. Get the connection information from the settings on Azure portal.
@@ -101,12 +101,12 @@ The results for running `service/deviceManager.py`:
     (u'{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}', 200)
     ```
 
-3. The result for calling the function `listDeviceId()` list all registed device identities.
+3. The result for calling the function `listDeviceId()` lists all the registered device identities.
     ```
     (u'[{"deviceId":"iotdevice1","generationId":"635928930091746067","etag":"MA==","connectionState":"Disconnected","status":"enabled","statusReason":null,"connectionStateUpdatedTime":"2016-03-16T09:46:02.5862088","statusUpdatedTime":"0001-01-01T00:00:00","lastActivityTime":"2016-03-16T09:46:02.5862088","cloudToDeviceMessageCount":0,"authentication":{"symmetricKey":{"primaryKey":"F+x9Sg9zVZC+TWnrQ1vXm0sYH/SAtvv6Wa5WhWnHdQo=","secondaryKey":"vZaSU6/8Mah4Chu28Vzx07/Feqe1a2EeDeUNEo9EY10="}}}]', 200)
     ```
 
-The result for running `device/d2cMsgSender.py`, it includes the empty content and status code 204 from the response if message is sent successfully:
+The result for running `device/d2cMsgSender.py` includes the empty content and status code 204 from the response if message is sent successfully:
 ```
 (u'', 204)
 ```
