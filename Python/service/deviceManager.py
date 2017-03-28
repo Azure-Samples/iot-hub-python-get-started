@@ -81,6 +81,6 @@ if __name__ == '__main__':
     connectionString = 'HostName=<iot-hub-name>.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=<iothubowner-policy-key>'
     dm = DeviceManager(connectionString)
     deviceId = 'iotdevice1'
-    print dm.createDeviceId(deviceId)
-    print dm.retrieveDeviceId(deviceId)
-    print dm.listDeviceIds()
+    print(dm.createDeviceId(deviceId))
+    print(dm.retrieveDeviceId(deviceId))
+    print(dm.listDeviceIds())
