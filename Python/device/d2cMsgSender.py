@@ -21,22 +21,24 @@ import time
 import requests
 import urllib
 
+
 class D2CMsgSender:
-    
+
     API_VERSION = '2016-02-03'
     TOKEN_VALID_SECS = 10
     TOKEN_FORMAT = 'SharedAccessSignature sig=%s&se=%s&skn=%s&sr=%s'
-    
+
     def __init__(self, connectionString=None):
         if connectionString != None:
-            iotHost, keyName, keyValue = [sub[sub.index('=') + 1:] for sub in connectionString.split(";")]
+            iotHost, keyName, keyValue = [
+                sub[sub.index('=') + 1:] for sub in connectionString.split(";")]
             self.iotHost = iotHost
             self.keyName = keyName
             self.keyValue = keyValue
-            
+
     def _buildExpiryOn(self):
         return '%d' % (time.time() + self.TOKEN_VALID_SECS)
-    
+
     def _buildIoTHubSasToken(self, deviceId):
         resourceUri = '%s/devices/%s' % (self.iotHost, deviceId)
         targetUri = resourceUri.lower()
@@ -49,13 +51,16 @@ class D2CMsgSender:
             )
         ).replace('/', '%2F')
         return self.TOKEN_FORMAT % (signature, expiryTime, self.keyName, targetUri)
-    
+
     def sendD2CMsg(self, deviceId, message):
         sasToken = self._buildIoTHubSasToken(deviceId)
-        url = 'https://%s/devices/%s/messages/events?api-version=%s' % (self.iotHost, deviceId, self.API_VERSION)
-        r = requests.post(url, headers={'Authorization': sasToken}, data=message)
+        url = 'https://%s/devices/%s/messages/events?api-version=%s' % (
+            self.iotHost, deviceId, self.API_VERSION)
+        r = requests.post(
+            url, headers={'Authorization': sasToken}, data=message)
         return r.text, r.status_code
-    
+
+
 if __name__ == '__main__':
     connectionString = 'HostName=<iot-hub-name>.azure-devices.net;SharedAccessKeyName=device;SharedAccessKey=<device-policy-key>'
     d2cMsgSender = D2CMsgSender(connectionString)
